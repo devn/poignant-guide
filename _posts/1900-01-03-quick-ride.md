@@ -36,7 +36,7 @@ a box as quickly as can be done.
 predicament.](../images/the.foxes-3.png "Our friends, those two helpless foxies,
 finally realize the gravity of their predicament.")
 
-My conscience won’t let me call Ruby a _computer_ language. That would imply
+My conscience won’t let me call Clojure a _computer_ language. That would imply
 that the language works primarily on the computer’s terms. That the language is
 designed to accommodate the computer, first and foremost. That therefore, we, the
 coders, are foreigners, seeking citizenship in the computer’s locale. It’s the
@@ -53,27 +53,27 @@ It is the language of our thoughts.
 **Read the following aloud to yourself.**
 
 {% highlight rb %}
-5.times { print "Odelay!" }
+(repeat 5 "Odelay!")
 {% endhighlight %}
 
 In English sentences, punctuation (such as periods, exclamations, parentheses)
 are silent. Punctuation adds meaning to words, helps give cues as to what the
-author intended by a sentence. So let’s read the above as: _Five times print
+author intended by a sentence. So let’s read the above as: _Repeat 5 times:
 “Odelay!”._
 
-Which is exactly what this small Ruby program does. Beck’s [mutated Spanish][1]
+Which is exactly what this small Clojure program does. Beck’s [mutated Spanish][1]
 exclamation will print five times on the computer screen.
 
 **Read the following aloud to yourself.**
 
 {% highlight rb %}
-exit unless "restaurant".include? "aura"
+(when (-> "restaurant" (.contains "aura"))
+  "trippy!")
 {% endhighlight %}
 
-Here we’re doing a basic reality check. Our program will **exit** (the program
-will end) **unless** the word **restaurant** contains (or **includes**) the word
-**aura**. Again, in English: _Exit unless the word restaurant includes the word
-aura._
+Here we're doing a basic reality check. **When** **restaurant** **contains**
+**aura**, say **Trippy!** Again, in english: _When restaurant contains aura,
+trippy!_
 
 Ever seen a programming language use question marks so effectively? Ruby uses
 some punctuation, such as exclamations and question marks, to enhance
@@ -83,22 +83,23 @@ make that apparent?
 **Read the following aloud to yourself.**
 
 {% highlight rb %}
-['toast', 'cheese', 'wine'].each { |food| print food.capitalize  }
+(for [food ["toast" "cheese" "wine"]]
+  (-> food .toUpperCase))
 {% endhighlight %}
 
 While this bit of code is less readable and sentence-like than the previous
-examples, I’d still encourage you to read it aloud. While Ruby may sometimes
+examples, I’d still encourage you to read it aloud. While Clojure may sometimes
 read like English, it sometimes reads as a shorter English. Fully translated
-into English, you might read the above as: _With the words ‘toast’, ‘cheese’,
-and ‘wine’: take each food and print it capitalized._
+into English, you might read the above as: _For the foods ‘toast’, ‘cheese’,
+and ‘wine’: take each food and give it back to me in capital letters._
 
-The computer then courteously responds: `Toast`, `Cheese` and `Wine`.
+The computer then courteously responds: `TOAST`, `CHEESE` and `WINE`.
 
 At this point, you’re probably wondering how these words actually fit together.
 Smotchkkiss is wondering what the dots and brackets mean. I’m going to discuss
 the various _parts of speech_ next.
 
-All you need to know thus far is that Ruby is basically built from sentences.
+All you need to know thus far is that Clojure is basically built from sentences.
 They aren’t exactly English sentences. They are short collections of words and
 punctuation which encompass a single thought. These sentences can form books.
 They can form pages. They can form entire novels, when strung together. Novels
@@ -185,7 +186,7 @@ How about making fun of asthmatics directly?
 **<span class="caps">IDEA FOUR</span>: ALEC <span class="caps">BALDWIN</span>**
 
 Adapt the book into a movie. And since, you know, I’m a character in this book,
-you could get someone like Alec Baldwin to play me. Someone who’s at a real
+you could get someone like Fred Durst to play me. Someone who’s at a real
 low point in his career.
 
 You could make it seem like I did tons of drugs. Like I was insane to work with.
@@ -239,14 +240,19 @@ you should be able to recognize every part of a Ruby program.
 
 ### Variables
 
-Any plain, lowercase word is a variable in ruby. Variables may consist of
-letters, digits and underscores.
+Any word is a variable in Clojure. Variables may consist of
+letters, digits, dashes, question marks, exclamation points,
+colons, underscores, and lots of other stuff.
 
-`x`, `y`, `banana2` or `phone_a_quail` are examples.
+`x`, `y`, `banana2` or `phone-a-quail` are examples.
 
 Variables are like nicknames. Remember when everyone used to call you Stinky
 Pete? People would say, “Get over here, Stinky Pete!” And everyone miraculously
 knew that Stinky Pete was you.
+
+In Clojure, you can yell at Stinky Pete the way you might in english:
+
+You're really stinky, `Stinky-Pete!`
 
 With variables, you give a nickname to something you use frequently. For
 instance, let’s say you run an orphanage. It’s a mean orphanage. And whenever
@@ -256,15 +262,15 @@ become attached to over in the darker moments of living in such nightmarish
 custody.
 
 {% highlight rb %}
-teddy_bear_fee = 121.08
+(def teddy-bear-fee 121.08)
 {% endhighlight %}
 
 Later, when you ring him up at the cash register (a really souped-up cash
-register which runs Ruby!), you’ll need to add together all his charges into a
+register which runs Clojure!), you’ll need to add together all his charges into a
 **total**.
 
 {% highlight rb %}
-total = orphan_fee + teddy_bear_fee + gratuity
+(def total (+ orphan-fee teddy-bear-fee gratuity))
 {% endhighlight %}
 
 Those variable nicknames sure help. And in the seedy underground of child sales,
@@ -277,16 +283,9 @@ any help is appreciated I’m sure.
 The most basic type of number is an _integer_, a **series of digits** which can
 start with a **plus or minus sign**.
 
-`1`, `23`, and `-10000` are examples.
+`1`, `23`, `32.1` and `-10000` are examples.
 
-Commas are not allowed in numbers, but underscores are. So if you feel the need
-to mark your thousands so the numbers are more readable, use an underscore.
-
-{% highlight rb %}
-population = 12_000_000_000
-{% endhighlight %}
-
-Decimal numbers are called _floats_ in Ruby. Floats consist of numbers with **a
+Decimal numbers are called _floats_ in Clojure. Floats consist of numbers with **a
 decimal place** or **scientific notation**.
 
 `3.14`, `-808.08` and `12.043e-04` are examples.
@@ -294,9 +293,9 @@ decimal place** or **scientific notation**.
 ### Strings
 
 Strings are any sort of characters (letters, digits, punctuation) surrounded by
-quotes. Both single and double **quotes** are used to create strings.
+double quotes.
 
-`"sealab"`, `'2021'`, or `"These cartoons are hilarious!"` are examples.
+`"sealab"`, `"2021"`, or `"These cartoons are hilarious!"` are examples.
 
 When you enclose characters in quotes, they are stored together as a single
 string.
@@ -306,20 +305,19 @@ Think of a reporter who is jotting down the mouth noises of a rambling celebrity
 like—what you have to do and how to work it.”
 
 {% highlight rb %}
-avril_quote = "I'm a lot wiser.  Now I know
-what the business is like -- what you have
-to do and how to work it."
+(def avril-quote "I'm a lot wiser. Now I know what the business is like
+-- what you have to do and how to work it.")
 {% endhighlight %}
 
-So, just as we stored a number in the **teddy_bear_fee** variable, now we’re
-storing a collection of characters (a string) in the **avril_quote** variable.
-The reporter sends this quote to the printers, who just happen to use Ruby to
+So, just as we stored a number in the **teddy-bear-fee** container, now we’re
+storing a collection of characters (a string) in the **avril-quote** container.
+The reporter sends this quote to the printers, who just happen to use Clojure to
 operate their printing press.
 
 {% highlight rb %}
-print oprah_quote
-print avril_quote
-print ashlee_simpson_debacle
+(print oprah-quote)
+(print avril-quote)
+(print ashlee-simpson-debacle)
 {% endhighlight %}
 
 ![They desire to be in my examples.](../images/the.foxes-4b.png "They desire to
@@ -327,10 +325,10 @@ be in my examples.")
 
 ### Symbols
 
-Symbols are words that look just like variables. Again, they may contain
+Keywords are words that look just like variables. Again, they may contain
 letters, digits, or underscores. But they **start with a colon**.
 
-`:a`, `:b`, or `:ponce_de_leon` are examples.
+`:a`, `:b`, or `:ponce-de-leon` are examples.
 
 Symbols are lightweight strings. Usually, symbols are used in situations where
 you need a string but you won’t be printing it to the screen.
@@ -341,7 +339,7 @@ digests the symbol. Ah. Sweet, sweet relief.
 
 ![Chunky bacon!!](../images/the.foxes-4c.png "Chunky bacon!!")
 
-### Constants
+### Everything is Constant!
 
 Constants are words like variables, but constants are **capitalized**. If
 variables are the nouns of Ruby, then think of constants as the proper nouns.

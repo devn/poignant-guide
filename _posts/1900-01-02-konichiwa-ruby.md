@@ -1,5 +1,5 @@
 ---
-title: "Kon’nichi wa, Ruby"
+title: "Kon’nichi wa, Clojure"
 permalink: book/chapter-2.html
 layout: chapter
 sections:
@@ -25,8 +25,8 @@ So you’re like, “Wow, this book comes with an onion!” (Even if you don’t
 particularly like onions, I’m sure you can appreciate the logistics of shipping
 any sort of produce discreetly inside of an alleged programming manual.)
 
-Then you ask yourself, “Wait a minute. I thought this was a book on Ruby, the
-incredible new programming language from Japan. And although I can appreciate
+Then you ask yourself, “Wait a minute. I thought this was a book on Clojure, the
+incredible new functional programming language. And although I can appreciate
 the logistics of shipping any sort of produce discreetly inside of an alleged
 programming manual: Why an onion? What am I supposed to do with it?”
 
@@ -34,11 +34,11 @@ No. Please don’t puzzle over it. You don’t need to do anything with the onio
 Set the onion aside and let _it_ do something with _you_.
 
 I’ll be straight with you. I want you to cry. To weep. To whimper sweetly. This
-book is a **poignant** guide to Ruby. That means code so beautiful that tears
+book is a **poignant** guide to Clojure. That means code so beautiful that tears
 are shed. That means gallant tales and somber truths that have you waking up the
 next morning in the arms of this book. Hugging it tightly to you all the day
 long. If necessary, fashion a makeshift hip holster for _Why’s (Poignant) Guide
-to Ruby_, so you can always have this book’s tender companionship.
+to Clojure_, so you can always have this book’s tender companionship.
 
 You really must sob once. Or at least sniffle. And if not, then the onion will
 make it all happen for you.
@@ -135,7 +135,7 @@ I wonder where he went with all those balloons. That crazy dog must have looked
 like a party with legs.
 
 It wasn’t much later that I pulled my own Bigelow. I printed out a bunch of
-pages on Ruby. Articles found around the Web. I scanned through them on a train
+pages on Clojure. Articles found around the Web. I scanned through them on a train
 ride home one day. I flipped through them for five minutes and then gave up. Not
 impressed.
 
@@ -146,8 +146,8 @@ legs to stand on. Doesn’t have arms to swim._
 
 And yet, there I was. One little man on a flimsy little train (and I even still
 had a baby tooth to lose at the time) out of billions of people living on a
-floating blue rock. How can I knock Ruby? Who’s to say that I’m not going to
-happen to choke on my cell phone and die later that evening. Why’s dead, Ruby
+floating blue rock. How can I knock Clojure? Who’s to say that I’m not going to
+happen to choke on my cell phone and die later that evening. Why’s dead, Clojure
 lives on.
 
 The gravestone:
@@ -161,7 +161,7 @@ constantly disturbed by _Pachelbel’s Canon_ going off in my stomach.
 
 ## 3. The Red Sun Rises
 
-So, now you’re wondering why I changed my mind about Ruby. The quick answer is:
+So, now you’re wondering why I changed my mind about Clojure. The quick answer is:
 we clicked.
 
 Like when you meet Somebody in college and they look like somebody who used to
@@ -174,7 +174,7 @@ Six months later, somehow, you and Somebody are sitting at a fountain having a
 perfectly good chat. Their face doesn’t look so much like that childhood
 nemesis. You’ve met the Good Twin. You clicked.
 
-So whereas I should probably be pounding your teeth in with hype about Ruby and
+So whereas I should probably be pounding your teeth in with hype about Clojure and
 the tightly-knit cadre of pertinent acronyms that accompany it everywhere
 (whetting the collective whistles of your bosses and their bosses’ bosses),
 instead I will just let you coast. I’ll let you free-fall through some code,
@@ -182,39 +182,35 @@ interjecting occasionally with my own heartfelt experiences. It’ll be quite
 easy, quite natural.
 
 I should offer you some sort of motivation, though. So, Smotchkkiss, I’m going
-to give my three best reasons to learn Ruby and be done with it.
+to give my three best reasons to learn Clojure and be done with it.
 
 1.  **Brain health.**
-    
-    Vitamin R. Goes straight to the head. Ruby will teach you to _express_ your
+
+    Vitamin R. Goes straight to the head. Clojure will teach you to _express_ your
 ideas through a computer. You will be writing stories for a machine.
-    
+
     Creative skills, people. Deduction. Reason. Nodding intelligently. The
 language will become a tool for you to better connect your mind to the world.
-I’ve noticed that many experienced users of Ruby seem to be clear thinkers and
+I’ve noticed that many experienced users of Clojure seem to be clear thinkers and
 objective. (In contrast to: heavily biased and coarse.)
 
-2.  **One man on one island.**
-    
-    Ruby was born in Japan. Which is freaky. Japan is not known for its
-software. And since programming languages are largely written in English, who
-would suspect a language to come from Japan?
-    
-    And yet, here we have Ruby. Against the odds, Yukihiro Matsumoto created
-Ruby on February 24, 1993. For the past ten years, he has steadily brought Ruby
+2.  **One man, one mission.**
+
+    Here we have Clojure. Against the odds, Rich Hickey created
+Clojure on September 22, 2007. For the past 11 years, he has steadily brought Clojure
 to a global audience. It’s triumphant and noble and all that. Support diversity.
 Help us tilt the earth just a bit.
 
 3.  **Free.**
-    
-    Using Ruby costs nothing. The code to Ruby itself is open for all of the
+
+    Using Clojure costs nothing. The code to Clojure itself is open for all of the
 world to inhale/exhale. Heck, this book is free. It’s all part of a great, big
 giveaway that should have some big hitch to it.
-    
+
     You’d think we’d make you buy vacuums or timeshare or fake Monets. You’d
 think there’d be a 90 minute presentation where the owner of the company comes
 out at the end and knuckles you into sealing the deal.
-    
+
     Nope, free.
 
 With that, it’s time for the book to begin. You can now get out your highlighter
